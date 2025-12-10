@@ -3,13 +3,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-import LoginScreen from './screens/LoginScreen';
-import SignupScreen from './screens/SignupScreen';
-import HomeScreen from './screens/HomeScreen';
-import SeniorDashboard from './screens/SeniorDashboard';
-import CaregiverDashboard from './screens/CaregiverDashboard';
-import UserDashboard from './screens/UserDashboard';
-import CameraScreen from './screens/CameraScreen';
+import LoginScreen from './LoginScreen';
+import SignupScreen from './SignupScreen';
+import HomeScreen from './HomeScreen';
+import SeniorDashboard from './SeniorDashboard';
+import CaregiverDashboard from './CaregiverDashboard';
+import UserDashboard from './UserDashboard';
+import CameraScreen from './CameraScreen';
 
 const Stack = createNativeStackNavigator();
 

@@ -85,12 +85,12 @@ export default function HomeScreen({ navigation }) {
 
   // grid features (2 per row)
   const features = [
-    { key: "1", title: "Senior", icon: require("../assets/dashboard.png"), screen: "SeniorDashboard" },
-    { key: "2", title: "Caregiver", icon: require("../assets/caregiver.png"), screen: "CaregiverDashboard" },
-    { key: "3", title: "Reports", icon: require("../assets/report.png") },
-    { key: "4", title: "Notifications", icon: require("../assets/notifications.png") },
-    { key: "5", title: "AI Insights", icon: require("../assets/ai.png") },
-    { key: "6", title: "Settings", icon: require("../assets/settings.png") },
+    { key: "1", title: "Senior", icon: require("./dashbord.png"), screen: "SeniorDashboard" },
+    { key: "2", title: "Caregiver", icon: require("./caregiver.png"), screen: "CaregiverDashboard" },
+    { key: "3", title: "Reports", icon: require("./report.png") },
+    { key: "4", title: "Notifications", icon: require("./notifications.png") },
+    { key: "5", title: "AI Insights", icon: require("./ai.png") },
+    { key: "6", title: "Settings", icon: require("./settings.png") },
   ];
 
   return (
@@ -98,35 +98,35 @@ export default function HomeScreen({ navigation }) {
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {/* Header */}
         <View style={styles.header}>
-          <Animated.Image source={require("../assets/logo.jpg")} style={[styles.logo, { transform: [{ scale: logoScale }] }]} />
           <View style={styles.headerRight}>
             <Text style={styles.greeting}>Hello, John 👋</Text>
+          <Animated.Image source={require("./logo.jpg")} style={[styles.logo, { transform: [{ scale: logoScale }] }]} />
             <Text style={styles.small}>Managing: Mrs. Sharma</Text>
             <TouchableOpacity onPress={() => navigation.navigate("UserDashboard")}>
-              <Image source={require("../assets/avatar.png")} style={styles.avatar} />
             </TouchableOpacity>
           </View>
+              <Image source={require("./avatar.png")} style={styles.avatar} />
         </View>
 
         {/* Live status strip (4 big cards in two rows) */}
         <View style={styles.statusRow}>
-          <StatusCard anim={cardAnims[0]} icon={require("../assets/health.png")} title="Health Score" value="82 / 100" accentColor="#4CAF50" />
-          <StatusCard anim={cardAnims[1]} icon={require("../assets/steps.png")} title="Steps Today" value="3,402" accentColor="#1A7FBA" />
+          <StatusCard anim={cardAnims[1]} icon={require("./steps.png")} title="Steps Today" value="3,402" accentColor="#1A7FBA" />
         </View>
+          <StatusCard anim={cardAnims[0]} icon={require("./health.png")} title="Health Score" value="82 / 100" accentColor="#4CAF50" />
 
         <View style={styles.statusRow}>
-          <StatusCard anim={cardAnims[2]} icon={require("../assets/meds.png")} title="Medication" value="1 missed" accentColor="#FF7043" />
-          <StatusCard anim={cardAnims[3]} icon={require("../assets/routine.png")} title="Next Routine" value="Walk at 5:30 PM" accentColor="#8E44AD" />
+          <StatusCard anim={cardAnims[2]} icon={require("./meds.png")} title="Medication" value="1 missed" accentColor="#FF7043" />
+          <StatusCard anim={cardAnims[3]} icon={require("./routine.png")} title="Next Routine" value="Walk at 5:30 PM" accentColor="#8E44AD" />
         </View>
 
         {/* Quick actions */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Quick Actions</Text>
           <View style={styles.quickRow}>
-            <QuickAction index={0} icon={require("../assets/ai.png")} label="AI Insights" onPress={() => alert("AI Insights")}/>
+            <QuickAction index={0} icon={require("./ai.png")} label="AI Insights" onPress={() => alert("AI Insights")}/>
             
-            <QuickAction index={2} icon={require("../assets/routine.png")} label="Routines" onPress={() => alert("Open routines")}/>
-            <QuickAction index={3} icon={require("../assets/sos.png")} label="SOS" onPress={() => alert("SOS Sent!")}/>
+            <QuickAction index={2} icon={require("./routine.png")} label="Routines" onPress={() => alert("Open routines")}/>
+            <QuickAction index={3} icon={require("./sos.png")} label="SOS" onPress={() => alert("SOS Sent!")}/>
           </View>
         </View>
 
@@ -152,7 +152,7 @@ export default function HomeScreen({ navigation }) {
           <View style={styles.alerts}>
             {alerts.map((a) => (
               <TouchableOpacity key={a.id} style={styles.alertItem} onPress={() => alert(a.text)}>
-                <Image source={require("../assets/notifications.png")} style={styles.alertIcon} />
+                <Image source={require("./notifications.png")} style={styles.alertIcon} />
                 <View style={{flex:1}}>
                   <Text style={styles.alertText} numberOfLines={2}>{a.text}</Text>
                   <Text style={styles.alertTime}>{a.time}</Text>

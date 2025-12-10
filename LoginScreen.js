@@ -42,7 +42,7 @@ export default function LoginScreen({ navigation }) {
       
       {/* Logo Animation */}
       <Animated.Image
-        source={require("../assets/logo.jpg")}
+        source={require("./logo.jpg")}
         style={[
           styles.logo,
           {
@@ -84,8 +84,8 @@ export default function LoginScreen({ navigation }) {
           <Image
             source={
               showPass
-                ? require("../assets/eye-off.png")
-                : require("../assets/eye.png")
+                ? require("./eye-off.png")
+                : require("./eye.png")
             }
             style={styles.eyeImg}
           />

@@ -9,19 +9,19 @@ export default function SeniorDashboard() {
 
       {/* Reminder cards */}
       <View style={styles.card}>
-        <Image source={require('../assets/eldercare.jpg')} style={styles.cardImage} />
+        <Image source={require('./eldercare.jpg')} style={styles.cardImage} />
         <Text style={styles.cardTitle}>Take Medicine</Text>
         <Text style={styles.cardSubtitle}>Today at 8:00 AM</Text>
       </View>
 
       <View style={styles.card}>
-        <Image source={require('../assets/avatar.png')} style={styles.cardImage} />
+        <Image source={require('./avatar.png')} style={styles.cardImage} />
         <Text style={styles.cardTitle}>Morning Walk</Text>
         <Text style={styles.cardSubtitle}>Today at 7:00 AM</Text>
       </View>
 
       <View style={styles.card}>
-        <Image source={require('../assets/dashboard.png')} style={styles.cardImage} />
+        <Image source={require('./dashboard.png')} style={styles.cardImage} />
         <Text style={styles.cardTitle}>Check Mood</Text>
         <Text style={styles.cardSubtitle}>Log your feelings</Text>
       </View>

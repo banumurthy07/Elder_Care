@@ -7,7 +7,7 @@ export default function UserDashboard({ navigation }) {
       <Text style={styles.title}>Hello, User!</Text>
       <Text style={styles.subtitle}>Your daily reminders and mood tracker</Text>
 
-      <Image source={require("../assets/dashboard.png")} style={styles.image} />
+      <Image source={require("./dashboard.png")} style={styles.image} />
 
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Camera")}>
         <Text style={styles.buttonText}>Open Camera</Text>
